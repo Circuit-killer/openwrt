@@ -559,6 +559,7 @@ wpa_supplicant_add_network() {
 	[ -n "$ht" ] && append network_data "htmode=$ht" "$N$T"
 
 	cat >> "$_config" <<EOF
+update_config=1
 network={
 	scan_ssid=$scan_ssid
 	ssid="$ssid"
